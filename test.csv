@@ -1,0 +1,14 @@
+Code Changes,Smart Test Selection Mechanism
+if temperature > 30:\n    print("It's a hot day!"),Changed Code Selection
+"from database import fetch_records\n\ndef process_records(records):\n    return [record.upper() for record in records]",Dependency-Based Selection
+"def calculate_product(a, b):\n    return a * b\n\ndef test_calculate_product():\n    assert calculate_product(3, 4) == 12\n    assert calculate_product(0, 7) == 0",Historical Failure Selection
+"class Triangle:\n    def __init__(self, side1, side2, side3):\n        self.side1 = side1\n        self.side2 = side2\n        self.side3 = side3\n\n    def is_equilateral(self):\n        return self.side1 == self.side2 == self.side3",Coverage-Driven Selection
+"class CircularBuffer:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.buffer = [None] * capacity\n        self.front = self.rear = -1",Priority Queue Selection
+if hours_worked > 40:\n    overtime_pay = (hours_worked - 40) * hourly_rate * 1.5\n    total_pay = 40 * hourly_rate + overtime_pay\nelse:\n    total_pay = hours_worked * hourly_rate,Changed Code Selection
+from utils import sanitize_input\n\ndef clean_input(input_data):\n    return sanitize_input(input_data)",Dependency-Based Selection
+"def subtract(a, b):\n    return a - b\n\ndef test_subtract():\n    assert subtract(8, 3) == 5\n    assert subtract(15, 7) == 8",Historical Failure Selection
+"class Rectangle:\n    def __init__(self, length, width):\n        self.length = length\n        self.width = width\n\n    def diagonal_length(self):\n        return (self.length**2 + self.width**2) ** 0.5",Coverage-Driven Selection
+"def encrypt_message(message, key):\n    return perform_encryption(message, key)",Impact Analysis Selection
+"class PriorityQueue:\n    def __init__(self):\n        self.queue = []\n\n    def enqueue(self, item, priority):\n        self.queue.append((item, priority))\n        self.queue.sort(key=lambda x: x[1])",Priority Queue Selection
+if len(email) > 50:\n    print("Email is too long. Please use a shorter one."),Changed Code Selection
+"from math import cos\n\ndef calculate_cosine(angle):\n    return cos(angle)",Dependency-Based Selection
