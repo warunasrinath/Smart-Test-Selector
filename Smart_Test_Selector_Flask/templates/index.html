@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Test Selection Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Smart Test Selection Prediction</h1>
+    <form method="post" action="/">
+        <label for="new_code_snippet">Enter New Code Snippet:</label>
+        <textarea name="new_code_snippet" id="new_code_snippet" rows="5" required></textarea>
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <p>The predicted Smart Test Selection Mechanism is: {{ prediction }}</p>
+    {% endif %}
+</body>
+</html>

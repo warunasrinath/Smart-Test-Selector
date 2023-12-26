@@ -1,0 +1,211 @@
+Code Changes,Smart Test Selection Mechanism
+if x > 5:\n    result = x * 2\nelse:\n    result = x + 3,Changed Code Selection
+"from database import connect_db\n\ndef get_user_data(user_id):\n    db = connect_db()\n    data = db.query(\""SELECT * FROM users\"")",Dependency-Based Selection
+"def divide(a, b):\n    return a / b\n\n\ndef test_divide():\n    assert divide(4, 2) == 2\n    assert divide(1, 0) == 0",Historical Failure Selection
+"class Calculator:\n    def add(self, a, b):\n        return a + b\n\n\ndef test_add():\n    calc = Calculator()\n    assert calc.add(2, 3) == 5\n\n\ndef test_subtract():\n    calc = Calculator()\n    assert calc.subtract(5, 3) == 2",Coverage-Driven Selection
+def process_data(data):\n    if data:\n        result = data[0] * 2\n    else:\n        result = 0,Impact Analysis Selection
+"class Queue:\n    def __init__(self):\n        self.items = []\n\n    def enqueue(self, item):\n        self.items.append(item)\n\n\ndef test_enqueue():\n    q = Queue()\n    q.enqueue(1)\n    assert q.items == [1]\n\n\ndef test_dequeue():\n    q = Queue()\n    q.enqueue(1)\n    assert q.dequeue() == 1",Priority Queue Selection
+if y != 0:\n    result = x / y\nelse:\n    result = None,Changed Code Selection
+from utils import process_data\n\ndef analyze_data(data):\n    processed_data = process_data(data)\n    # additional analysis logic,Dependency-Based Selection
+"def multiply(a, b):\n    return a * b\n\n\ndef test_multiply():\n    assert multiply(3, 4) == 12\n    assert multiply(0, 7) == 0",Historical Failure Selection
+"def update_user_info(user_id, new_info):\n    user = get_user_info(user_id)\n    if user:\n        user.update(new_info)\n        save_user_info(user)",Impact Analysis Selection
+"class Stack:\n    def __init__(self):\n        self.items = []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n        else:\n            return None",Priority Queue Selection
+for i in range(10):\n    print(i),Changed Code Selection
+"from math import sqrt\n\n\ndef calculate_distance(point1, point2):\n    return sqrt((point1[0] - point2[0]) ** 2 + (point1[1] - point2[1]) ** 2)",Dependency-Based Selection
+"def power(base, exponent):\n    return base ** exponent\n\n\ndef test_power():\n    assert power(2, 3) == 8\n    assert power(5, 0) == 1",Historical Failure Selection
+"class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\n    def area(self):\n        return 3.14 * self.radius ** 2",Coverage-Driven Selection
+"def send_notification(user_id, message):\n    user = get_user(user_id)\n    if user:\n        notify_user(user, message)",Impact Analysis Selection
+"class PriorityTaskQueue:\n    def __init__(self):\n        self.tasks = []\n\n    def add_task(self, task, priority):\n        self.tasks.append((task, priority))\n        self.tasks.sort(key=lambda x: x[1]),Priority Queue Selection",Priority Queue Selection
+"result = sum([i for i in range(1, 101)])",Changed Code Selection
+"from datetime import datetime\n\n\ndef convert_to_timestamp(date_str):\n    date_obj = datetime.strptime(date_str, '%Y-%m-%d')\n    return int(date_obj.timestamp())",Dependency-Based Selection
+def reverse_string(s):\n    return s[::-1]\n\n\ndef test_reverse_string():\n    assert reverse_string('hello') == 'olleh'\n    assert reverse_string('python') == 'nohtyp',Historical Failure Selection
+"class Triangle:\n    def __init__(self, side1, side2, side3):\n        self.side1 = side1\n        self.side2 = side2\n        self.side3 = side3\n\n    def perimeter(self):\n        return self.side1 + self.side2 + self.side3",Coverage-Driven Selection
+"def encrypt_data(data, key):\n    encrypted_data = perform_encryption(data, key)\n    save_encrypted_data(encrypted_data)",Impact Analysis Selection
+"class MinHeap:\n    def __init__(self):\n        self.heap = []\n\n    def insert(self, value):\n        self.heap.append(value)\n        self.heapify_up()",Priority Queue Selection
+"result = sum([i**2 for i in range(1, 11)])",Changed Code Selection
+from statistics import mean\n\n\ndef calculate_average(numbers):\n    return mean(numbers),Dependency-Based Selection
+def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1),Historical Failure Selection
+"class MaxHeap:\n    def __init__(self):\n        self.heap = []\n\n    def insert(self, value):\n        self.heap.append(value)\n        self.heapify_up()",Priority Queue Selection
+if x > 5:\n    result = x * 2\nelse:\n    result = x + 3,Changed Code Selection
+"from database import connect_db\n\ndef get_user_data(user_id):\n    db = connect_db()\n    data = db.query(\"SELECT * FROM users\")",Dependency-Based Selection
+"def divide(a, b):\n    return a / b\n\n\ndef test_divide():\n    assert divide(4, 2) == 2\n    assert divide(1, 0) == 0",Historical Failure Selection
+"class Calculator:\n    def add(self, a, b):\n        return a + b\n\n\ndef test_add():\n    calc = Calculator()\n    assert calc.add(2, 3) == 5\n\n\ndef test_subtract():\n    calc = Calculator()\n    assert calc.subtract(5, 3) == 2",Coverage-Driven Selection
+def process_data(data):\n    if data:\n        result = data[0] * 2\n    else:\n        result = 0,Impact Analysis Selection
+"class Queue:\n    def __init__(self):\n        self.items = []\n\n    def enqueue(self, item):\n        self.items.append(item)\n\n\ndef test_enqueue():\n    q = Queue()\n    q.enqueue(1)\n    assert q.items == [1]\n\n\ndef test_dequeue():\n    q = Queue()\n    q.enqueue(1)\n    assert q.dequeue() == 1",Priority Queue Selection
+if y != 0:\n    result = x / y\nelse:\n    result = None,Changed Code Selection
+from utils import process_data\n\ndef analyze_data(data):\n    processed_data = process_data(data)\n    # additional analysis logic,Dependency-Based Selection
+"def multiply(a, b):\n    return a * b\n\n\ndef test_multiply():\n    assert multiply(3, 4) == 12\n    assert multiply(0, 7) == 0",Historical Failure Selection
+"def update_user_info(user_id, new_info):\n    user = get_user_info(user_id)\n    if user:\n        user.update(new_info)\n        save_user_info(user)",Impact Analysis Selection
+"class Stack:\n    def __init__(self):\n        self.items = []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n        else:\n            return None",Priority Queue Selection
+for i in range(10):\n    print(i),Changed Code Selection
+"from math import sqrt\n\n\ndef calculate_distance(point1, point2):\n    return sqrt((point1[0] - point2[0]) ** 2 + (point1[1] - point2[1]) ** 2)",Dependency-Based Selection
+"def power(base, exponent):\n    return base ** exponent\n\n\ndef test_power():\n    assert power(2, 3) == 8\n    assert power(5, 0) == 1",Historical Failure Selection
+"class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\n    def area(self):\n        return 3.14 * self.radius ** 2",Coverage-Driven Selection
+"def send_notification(user_id, message):\n    user = get_user(user_id)\n    if user:\n        notify_user(user, message)",Impact Analysis Selection
+"class PriorityTaskQueue:\n    def __init__(self):\n        self.tasks = []\n\n    def add_task(self, task, priority):\n        self.tasks.append((task, priority))\n        self.tasks.sort(key=lambda x: x[1])",Priority Queue Selection
+"result = sum([i for i in range(1, 101)])",Changed Code Selection
+"from datetime import datetime\n\n\ndef convert_to_timestamp(date_str):\n    date_obj = datetime.strptime(date_str, '%Y-%m-%d')\n    return int(date_obj.timestamp())",Dependency-Based Selection
+def reverse_string(s):\n    return s[::-1]\n\n\ndef test_reverse_string():\n    assert reverse_string('hello') == 'olleh'\n    assert reverse_string('python') == 'nohtyp'",Historical Failure Selection
+"class Triangle:\n    def __init__(self, side1, side2, side3):\n        self.side1 = side1\n        self.side2 = side2\n        self.side3 = side3\n\n    def perimeter(self):\n        return self.side1 + self.side2 + self.side3",Coverage-Driven Selection
+"def encrypt_data(data, key):\n    encrypted_data = perform_encryption(data, key)\n    save_encrypted_data(encrypted_data)",Impact Analysis Selection
+"class MinHeap:\n    def __init__(self):\n        self.heap = []\n\n    def insert(self, value):\n        self.heap.append(value)\n        self.heapify_up()",Priority Queue Selection
+"result = sum([i**2 for i in range(1, 11)])",Changed Code Selection
+from statistics import mean\n\n\ndef calculate_average(numbers):\n    return mean(numbers)",Dependency-Based Selection
+def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    else:\n        return n * factorial(n-1)",Historical Failure Selection
+"class MaxHeap:\n    def __init__(self):\n        self.heap = []\n\n    def insert(self, value):\n        self.heap.append(value)\n        self.heapify_up()",Priority Queue Selection
+if x < 0:\n    result = -x\nelse:\n    result = x,Changed Code Selection
+"from database import fetch_data\n\ndef process_data(data):\n    return data * 2",Dependency-Based Selection
+"def add(a, b):\n    return a + b\n\ndef test_add():\n    assert add(2, 3) == 5\n    assert add(-1, 1) == 0",Historical Failure Selection
+"class LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def add_node(self, value):\n        new_node = Node(value)\n        new_node.next = self.head\n        self.head = new_node",Coverage-Driven Selection
+"def analyze_text(text):\n    return len(text.split())",Impact Analysis Selection
+"class HashTable:\n    def __init__(self):\n        self.table = [None] * 1000\n\n    def add_key_value(self, key, value):\n        hash_value = self._hash_function(key)\n        self.table[hash_value] = value",Priority Queue Selection
+if y == 0:\n    result = "Division by zero"\nelse:\n    result = x / y,Changed Code Selection
+from utils import sanitize_data\n\ndef clean_data(data):\n    return sanitize_data(data)",Dependency-Based Selection
+"def subtract(a, b):\n    return a - b\n\ndef test_subtract():\n    assert subtract(5, 3) == 2\n    assert subtract(10, 7) == 3",Historical Failure Selection
+"def encrypt_message(message, key):\n    return perform_encryption(message, key)",Impact Analysis Selection
+"class PriorityQueue:\n    def __init__(self):\n        self.queue = []\n\n    def enqueue(self, item, priority):\n        self.queue.append((item, priority))\n        self.queue.sort(key=lambda x: x[1])",Priority Queue Selection
+"from math import sin\n\ndef calculate_sine(angle):\n    return sin(angle)",Dependency-Based Selection
+"def calculate_square_root(n):\n    return n ** 0.5\n\ndef test_square_root():\n    assert calculate_square_root(16) == 4\n    assert calculate_square_root(25) == 5",Historical Failure Selection
+"class Triangle:\n    def __init__(self, side1, side2, side3):\n        self.side1 = side1\n        self.side2 = side2\n        self.side3 = side3\n\n    def area(self):\n        s = (self.side1 + self.side2 + self.side3) / 2\n        return (s * (s - self.side1) * (s - self.side2) * (s - self.side3)) ** 0.5",Coverage-Driven Selection
+"def send_email(recipient, subject, body):\n    # Email sending logic\n    pass",Impact Analysis Selection
+"class CircularQueue:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.queue = [None] * capacity\n        self.front = self.rear = -1",Priority Queue Selection
+"result = sum([i for i in range(1, 51) if i % 2 == 0])",Changed Code Selection
+"from datetime import date\n\ndef calculate_age(birthdate):\n    today = date.today()\n    return today.year - birthdate.year - ((today.month, today.day) < (birthdate.month, birthdate.day))",Dependency-Based Selection
+"def reverse_list(lst):\n    return lst[::-1]\n\ndef test_reverse_list():\n    assert reverse_list([1, 2, 3]) == [3, 2, 1]\n    assert reverse_list(['a', 'b', 'c']) == ['c', 'b', 'a']",Historical Failure Selection
+"def log_message(message):\n    # Logging logic\n    pass",Impact Analysis Selection
+"class PriorityQueue:\n    def __init__(self):\n        self.queue = []\n\n    def enqueue(self, item, priority):\n        self.queue.append((item, priority))\n        self.queue.sort(key=lambda x: x[1])",Priority Queue Selection
+"result = sum([i**2 for i in range(1, 21)])",Changed Code Selection
+"from statistics import median\n\ndef calculate_median(numbers):\n    return median(numbers)",Dependency-Based Selection
+"def is_even(n):\n    return n % 2 == 0\n\ndef test_is_even():\n    assert is_even(4)\n    assert not is_even(3)",Historical Failure Selection
+"class Cylinder:\n    def __init__(self, radius, height):\n        self.radius = radius\n        self.height = height\n\n    def volume(self):\n        return 3.14 * self.radius ** 2 * self.height",Coverage-Driven Selection
+"def generate_report(data):\n    # Report generation logic\n    pass",Impact Analysis Selection
+"class PriorityTaskQueue:\n    def __init__(self):\n        self.tasks = []\n\n    def add_task(self, task, priority):\n        self.tasks.append((task, priority))\n        self.tasks.sort(key=lambda x: x[1])",Priority Queue Selection
+"result = sum([i for i in range(1, 101) if i % 2 != 0])",Changed Code Selection
+"from datetime import timedelta\n\ndef add_days_to_date(current_date, days):\n    return current_date + timedelta(days=days)",Dependency-Based Selection
+"def is_palindrome(word):\n    return word == word[::-1]\n\ndef test_is_palindrome():\n    assert is_palindrome('radar')\n    assert not is_palindrome('python')",Historical Failure Selection
+"def authenticate_user(username, password):\n    # Authentication logic\n    pass",Impact Analysis Selection
+"class MinHeap:\n    def __init__(self):\n        self.heap = []\n\n    def insert(self, value):\n        self.heap.append(value)\n        self.heapify_up()",Priority Queue Selection
+"result = sum([i**3 for i in range(1, 11)])",Changed Code Selection
+from statistics import mode\n\ndef calculate_mode(numbers):\n    return mode(numbers)",Dependency-Based Selection
+"def count_vowels(text):\n    vowels = 'aeiou'\n    return sum(1 for char in text if char.lower() in vowels)",Historical Failure Selection
+"def create_invoice(items, prices):\n    # Invoice creation logic\n    pass",Impact Analysis Selection
+"class MaxHeap:\n    def __init__(self):\n        self.heap = []\n\n    def insert(self, value):\n        self.heap.append(value)\n        self.heapify_up()",Priority Queue Selection
+"result = sum([i for i in range(1, 51) if i % 2 != 0])",Changed Code Selection
+"from random import choice\n\ndef choose_random_item(lst):\n    return choice(lst)",Dependency-Based Selection
+"def calculate_hypotenuse(a, b):\n    return (a**2 + b**2) ** 0.5",Historical Failure Selection
+"def generate_token(user_id):\n    # Token generation logic\n    pass",Impact Analysis Selection
+"class PriorityBuffer:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.buffer = [None] * capacity",Priority Queue Selection
+"result = sum([i**4 for i in range(1, 11)])",Changed Code Selection
+"from collections import Counter\n\ndef most_common_element(lst):\n    count = Counter(lst)\n    return count.most_common(1)[0][0]",Dependency-Based Selection
+"def check_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",Historical Failure Selection
+"def send_sms(phone_number, message):\n    # SMS sending logic\n    pass",Impact Analysis Selection
+"class MinPriorityQueue:\n    def __init__(self):\n        self.queue = []\n\n    def enqueue(self, item, priority):\n        self.queue.append((item, priority))\n        self.queue.sort(key=lambda x: x[1])",Priority Queue Selection
+"result = sum([i for i in range(1, 101) if i % 3 == 0])",Changed Code Selection
+"from itertools import combinations\n\ndef get_combinations(items):\n    return list(combinations(items, 2))",Dependency-Based Selection
+"def calculate_perimeter(radius):\n    return 2 * 3.14 * radius",Historical Failure Selection
+"def login(user, password):\n    # Login logic\n    pass",Impact Analysis Selection
+"class MaxPriorityQueue:\n    def __init__(self):\n        self.queue = []\n\n    def enqueue(self, item, priority):\n        self.queue.append((item, priority))\n        self.queue.sort(key=lambda x: x[1])",Priority Queue Selection
+if temperature > 30:\n    print("It's a hot day!"),Changed Code Selection
+"from database import fetch_records\n\ndef process_records(records):\n    return [record.upper() for record in records]",Dependency-Based Selection
+"def calculate_product(a, b):\n    return a * b\n\ndef test_calculate_product():\n    assert calculate_product(3, 4) == 12\n    assert calculate_product(0, 7) == 0",Historical Failure Selection
+"class Triangle:\n    def __init__(self, side1, side2, side3):\n        self.side1 = side1\n        self.side2 = side2\n        self.side3 = side3\n\n    def is_equilateral(self):\n        return self.side1 == self.side2 == self.side3",Coverage-Driven Selection
+"class CircularBuffer:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.buffer = [None] * capacity\n        self.front = self.rear = -1",Priority Queue Selection
+if hours_worked > 40:\n    overtime_pay = (hours_worked - 40) * hourly_rate * 1.5\n    total_pay = 40 * hourly_rate + overtime_pay\nelse:\n    total_pay = hours_worked * hourly_rate,Changed Code Selection
+from utils import sanitize_input\n\ndef clean_input(input_data):\n    return sanitize_input(input_data)",Dependency-Based Selection
+"def subtract(a, b):\n    return a - b\n\ndef test_subtract():\n    assert subtract(8, 3) == 5\n    assert subtract(15, 7) == 8",Historical Failure Selection
+"def encrypt_message(message, key):\n    return perform_encryption(message, key)",Impact Analysis Selection
+"class PriorityQueue:\n    def __init__(self):\n        self.queue = []\n\n    def enqueue(self, item, priority):\n        self.queue.append((item, priority))\n        self.queue.sort(key=lambda x: x[1])",Priority Queue Selection
+if len(email) > 50:\n    print("Email is too long. Please use a shorter one."),Changed Code Selection
+"from math import cos\n\ndef calculate_cosine(angle):\n    return cos(angle)",Dependency-Based Selection
+"def calculate_cube_root(n):\n    return n ** (1/3)\n\ndef test_cube_root():\n    assert calculate_cube_root(8) == 2\n    assert calculate_cube_root(27) == 3",Historical Failure Selection
+"class TaskScheduler:\n    def __init__(self):\n        self.tasks = []\n\n    def add_task(self, task, priority):\n        self.tasks.append((task, priority))\n        self.tasks.sort(key=lambda x: x[1])",Priority Queue Selection
+"from datetime import timedelta\n\ndef add_days_to_date(current_date, days):\n    return current_date + timedelta(days=days)",Dependency-Based Selection
+"def check_palindrome(word):\n    return word == word[::-1]\n\ndef test_check_palindrome():\n    assert check_palindrome('radar')\n    assert not check_palindrome('python')",Historical Failure Selection
+"class PriorityTaskQueue:\n    def __init__(self):\n        self.tasks = []\n\n    def add_task(self, task, priority):\n        self.tasks.append((task, priority))\n        self.tasks.sort(key=lambda x: x[1])",Priority Queue Selection
+"result = sum([i for i in range(1, 11) if i % 2 != 0])",Changed Code Selection
+"from statistics import variance\n\ndef calculate_variance(numbers):\n    return variance(numbers)",Dependency-Based Selection
+"def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",Historical Failure Selection
+"class SquarePyramid:\n    def __init__(self, base_side, height):\n        self.base_side = base_side\n        self.height = height\n\n    def surface_area(self):\n        return self.base_side**2 + 2 * self.base_side * ((self.base_side**2 + (4 * self.height**2))**0.5) / 2",Coverage-Driven Selection
+"class MinPriorityQueue:\n    def __init__(self):\n        self.queue = []\n\n    def enqueue(self, item, priority):\n        self.queue.append((item, priority))\n        self.queue.sort(key=lambda x: x[1])",Priority Queue Selection
+"result = sum([i**3 for i in range(1, 11)])",Changed Code Selection
+"from statistics import mode\n\ndef calculate_mode(numbers):\n    return mode(numbers)",Dependency-Based Selection
+"def count_consonants(text):\n    consonants = 'bcdfghjklmnpqrstvwxyz'\n    return sum(1 for char in text.lower() if char in consonants)",Historical Failure Selection
+"class MaxPriorityQueue:\n    def __init__(self):\n        self.queue = []\n\n    def enqueue(self, item, priority):\n        self.queue.append((item, priority))\n        self.queue.sort(key=lambda x: x[1])",Priority Queue Selection
+"result = sum([i for i in range(1, 51) if i % 2 != 0])",Changed Code Selection
+"from random import shuffle\n\ndef shuffle_list(lst):\n    shuffled_list = lst.copy()\n    shuffle(shuffled_list)\n    return shuffled_list",Dependency-Based Selection
+"def calculate_hypotenuse(a, b):\n    return (a**2 + b**2) ** 0.5",Historical Failure Selection
+"class PriorityBuffer:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.buffer = [None] * capacity",Priority Queue Selection
+"result = sum([i**4 for i in range(1, 11)])",Changed Code Selection
+"from collections import Counter\n\ndef most_common_element(lst):\n    count = Counter(lst)\n    return count.most_common(1)[0][0]",Dependency-Based Selection
+"def check_odd_or_even(n):\n    return 'even' if n % 2 == 0 else 'odd'",Historical Failure Selection
+"class MinHeap:\n    def __init__(self):\n        self.heap = []\n\n    def insert(self, value):\n        self.heap.append(value)\n        self.heapify_up()",Priority Queue Selection
+"result = sum([i for i in range(1, 101) if i % 3 == 0])",Changed Code Selection
+"from itertools import combinations\n\ndef get_combinations(items):\n    return list(combinations(items, 2))",Dependency-Based Selection
+"def calculate_circumference(radius):\n    return 2 * 3.14 * radius",Historical Failure Selection
+"dividend = 15\ndivisor = 0\nresult = dividend / divisor",Coverage-Driven Selection
+"class MaxHeap:\n    def __init__(self):\n        self.heap = []\n\n    def insert(self, value):\n        self.heap.append(value)\n        self.heapify_up()",Priority Queue Selection
+if x > 5:\n    result = x * 2\nelse:\n    result = x + 3,Changed Code Selection
+"from database import connect_db\n\ndef get_user_data(user_id):\n    db = connect_db()\n    data = db.query(\"SELECT * FROM users\")",Dependency-Based Selection
+"def divide(a, b):\n    return a / b\n\ndef test_divide():\n    assert divide(4, 2) == 2\n    assert divide(1, 0) == 0",Historical Failure Selection
+"class Calculator:\n    def add(self, a, b):\n        return a + b\n\ndef test_add():\n    calc = Calculator()\n    assert calc.add(2, 3) == 5\n\ndef test_subtract():\n    calc = Calculator()\n    assert calc.subtract(5, 3) == 2",Impact Analysis Selection
+def process_data(data):\n    if data:\n        result = data[0] * 2\n    else:\n        result = 0,Priority Queue Selection
+"class Queue:\n    def __init__(self):\n        self.items = []\n\n    def enqueue(self, item):\n        self.items.append(item)\n\ndef test_enqueue():\n    q = Queue()\n    q.enqueue(1)\n    assert q.items == [1]\n\ndef test_dequeue():\n    q = Queue()\n    q.enqueue(1)\n    assert q.dequeue() == 1",Dependency-Based Selection
+if y != 0:\n    result = x / y\nelse:\n    result = None,Changed Code Selection
+from utils import process_data\n\ndef analyze_data(data):\n    processed_data = process_data(data)\n    # additional analysis logic,Dependency-Based Selection
+"def multiply(a, b):\n    return a * b\n\ndef test_multiply():\n    assert multiply(3, 4) == 12\n    assert multiply(0, 7) == 0",Historical Failure Selection
+"class Rectangle:\n    def __init__(self, length, width):\n        self.length = length\n        self.width = width\n\ndef area(self):\n        return self.length * self.width",Impact Analysis Selection
+"def update_user_info(user_id, new_info):\n    user = get_user_info(user_id)\n    if user:\n        user.update(new_info)\n        save_user_info(user)",Priority Queue Selection
+"class Stack:\n    def __init__(self):\n        self.items = []\n\n    def push(self, item):\n        self.items.append(item)\n\ndef pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n        else:\n            return None",Dependency-Based Selection
+for i in range(10):\n    print(i),Changed Code Selection
+if z > 0:\n    result = x ** z\nelse:\n    result = x",Dependency-Based Selection
+"from database import fetch_data\n\ndef process_data(data):\n    return [item.upper() for item in data]",Dependency-Based Selection
+"def calculate_sum(a, b):\n    return a + b\n\ndef test_calculate_sum():\n    assert calculate_sum(3, 4) == 7\n    assert calculate_sum(-1, 5) == 4",Historical Failure Selection
+"class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\ndef area(self):\n        return 3.14 * self.radius**2",Impact Analysis Selection
+"class LinkedList:\n    def __init__(self):\n        self.head = None\n\n    def is_empty(self):\n        return self.head is None\n\ndef append(self, data):\n        new_node = Node(data)\n        if self.head is None:\n            self.head = new_node\n        else:\n            last_node = self.head\n            while last_node.next:\n                last_node = last_node.next\n            last_node.next = new_node",Priority Queue Selection
+"if len(email) > 50:\n    print(\"Email is too long. Please use a shorter one.\")",Changed Code Selection
+"from math import sqrt\n\ndef calculate_square_root(number):\n    return sqrt(number)",Dependency-Based Selection
+if n % 2 == 0:\n    print(\"Even number\"),Changed Code Selection
+"x = 'abc'\ny = 2\nresult = x + y",Coverage-Driven Selection
+"def encrypt_data(data, key):\n    return perform_encryption(data, key)",Impact Analysis Selection
+"if len(password) < 8:\n    print(\"Password is too short. Please use a longer one.\")",Changed Code Selection
+"from utils import validate_input\n\ndef process_input(input_data):\n    if validate_input(input_data):\n        result = input_data * 2\n    else:\n        result = None",Dependency-Based Selection
+"class Square:\n    def __init__(self, side_length):\n        self.side_length = side_length\n\n    def area(self):\n        return self.side_length**2",Impact Analysis Selection
+"def send_notification(message, recipient):\n    return perform_notification(message, recipient)",Priority Queue Selection
+"if temperature > 30:\n    print(\"It's a hot day!\")",Changed Code Selection
+"result = 10 / 0",Coverage-Driven Selection
+"from database import fetch_records\n\ndef process_records(records):\n    return [record.upper() for record in records]",Dependency-Based Selection
+"def calculate_product(a, b):\n    return a * b\n\ndef test_calculate_product():\n    assert calculate_product(3, 4) == 12\n    assert calculate_product(0, 7) == 0",Historical Failure Selection
+"class Triangle:\n    def __init__(self, side1, side2, side3):\n        self.side1 = side1\n        self.side2 = side2\n        self.side3 = side3\n\n    def is_equilateral(self):\n        return self.side1 == self.side2 == self.side3",Impact Analysis Selection
+"class CircularBuffer:\n    def __init__(self, capacity):\n        self.capacity = capacity\n        self.buffer = [None] * capacity\n        self.front = self.rear = -1",Priority Queue Selection
+if hours_worked > 40:\n    overtime_pay = (hours_worked - 40) * hourly_rate * 1.5\n    total_pay = 40 * hourly_rate + overtime_pay\nelse:\n    total_pay = hours_worked * hourly_rate",Changed Code Selection
+from utils import sanitize_input\n\ndef clean_input(input_data):\n    return sanitize_input(input_data)",Dependency-Based Selection
+"def subtract(a, b):\n    return a - b\n\ndef test_subtract():\n    assert subtract(8, 3) == 5\n    assert subtract(15, 7) == 8",Historical Failure Selection
+"class Rectangle:\n    def __init__(self, length, width):\n        self.length = length\n        self.width = width\n\n    def diagonal_length(self):\n        return (self.length**2 + self.width**2) ** 0.5",Impact Analysis Selection
+"def encrypt_message(message, key):\n    return perform_encryption(message, key)",Priority Queue Selection
+"class PriorityQueue:\n    def __init__(self):\n        self.queue = []\n\n    def enqueue(self, item, priority):\n        self.queue.append((item, priority))\n        self.queue.sort(key=lambda x: x[1])",Priority Queue Selection
+if len(email) > 50:\n    print(\"Email is too long. Please use a shorter one.\"),Changed Code Selection
+"from math import cos\n\ndef calculate_cosine(angle):\n    return cos(angle)",Dependency-Based Selection
+"class DatabaseConnector:\n    def __init__(self, host, port, username, password):\n        self.host = host\n        self.port = port\n        self.username = username\n        self.password = password\n\n    def connect(self):\n        # Code to establish a database connection\n        pass",Dependency-Based Selection
+"def perform_operation(a, b, operation='add'):\n    if operation == 'add':\n        return a + b\n    elif operation == 'subtract':\n        return a - b\n    elif operation == 'multiply':\n        return a * b\n    elif operation == 'divide':\n        return a / b",Historical Failure Selection
+"class User:\n    def __init__(self, username, email, password):\n        self.username = username\n        self.email = email\n        self.password = password\n\n    def update_email(self, new_email):\n        self.email = new_email\n\n    def reset_password(self):\n        # Code to reset the password\n        pass",Impact Analysis Selection
+"class ShoppingBasket:\n    def __init__(self):\n        self.items = []\n        self.total_price = 0.0\n\n    def add_item(self, item, quantity, price_per_unit):\n        # Code to add an item to the basket\n        pass\n\n    def calculate_total_price(self):\n        for item in self.items:\n            self.total_price += item['quantity'] * item['price_per_unit']",Priority Queue Selection
+"def validate_input(value, data_type='int'):\n    try:\n        if data_type == 'int':\n            int(value)\n        elif data_type == 'float':\n            float(value)\n        elif data_type == 'bool':\n            bool(value)\n        elif data_type == 'str':\n            str(value)\n        else:\n            raise ValueError(f'Invalid data_type: {data_type}')\n        return True\n    except ValueError:\n        return False",Dependency-Based Selection
+"class Circle:\n    def __init__(self, radius):\n        self.radius = radius\n\n    def calculate_circumference(self):\n        return 2 * 3.14 * self.radius",Changed Code Selection
+"def process_data(data, strategy='default'):\n    if strategy == 'default':\n        # Default processing logic\n        pass\n    elif strategy == 'advanced':\n        # Advanced processing logic\n        pass\n    else:\n        raise ValueError(f'Invalid strategy: {strategy}')",Dependency-Based Selection
+"class TemperatureConverter:\n    def __init__(self, temperature, unit='celsius'):\n        self.temperature = temperature\n        self.unit = unit\n\n    def convert_to_fahrenheit(self):\n        if self.unit == 'celsius':\n            return (self.temperature * 9/5) + 32\n        elif self.unit == 'kelvin':\n            return (self.temperature - 273.15) * 9/5 + 32\n        else:\n            raise ValueError(f'Invalid unit: {self.unit}')",Dependency-Based Selection
+"def calculate_discounted_price(original_price, discount_percentage, customer_type='regular'):\n    if customer_type == 'regular':\n        return original_price * (1 - discount_percentage / 100)\n    elif customer_type == 'premium':\n        return original_price * (1 - discount_percentage / 100) * 0.9\n    else:\n        raise ValueError(f'Invalid customer_type: {customer_type}')",Priority Queue Selection
+"class MatrixMultiplier:\n    def __init__(self, matrix_a, matrix_b):\n        self.matrix_a = matrix_a\n        self.matrix_b = matrix_b\n\n    def multiply_matrices(self):\n        # Code to multiply two matrices\n        pass",Dependency-Based Selection
+"def encrypt_data(data, key, algorithm='aes'):\n    if algorithm == 'aes':\n        # Code to encrypt data using AES algorithm\n        pass\n    elif algorithm == 'des':\n        # Code to encrypt data using DES algorithm\n        pass\n    else:\n        raise ValueError(f'Invalid algorithm: {algorithm}')",Changed Code Selection
+"base = 8\nexponent = -2\nresult = base ** exponent",Coverage-Driven Selection
+"class Vehicle:\n    def __init__(self, make, model, year):\n        self.make = make\n        self.model = model\n        self.year = year\n\n    def display_info(self):\n        return f'{self.year} {self.make} {self.model}'",Impact Analysis Selection
+"def perform_calculation(a, b, operation='add'):\n    if operation == 'add':\n        return a + b\n    elif operation == 'subtract':\n        return a - b\n    elif operation == 'multiply':\n        return a * b\n    elif operation == 'divide':\n        return a / b",Priority Queue Selection
+"class Stack:\n    def __init__(self):\n        self.items = []\n\n    def push(self, item):\n        self.items.append(item)\n\n    def pop(self):\n        if not self.is_empty():\n            return self.items.pop()\n        else:\n            return None",Dependency-Based Selection
+"def analyze_data(data, analysis_type='basic'):\n    if analysis_type == 'basic':\n        # Basic analysis logic\n        pass\n    elif analysis_type == 'advanced':\n        # Advanced analysis logic\n        pass\n    else:\n        raise ValueError(f'Invalid analysis_type: {analysis_type}')",Historical Failure Selection
+"def calculate_area(base, height, shape='triangle'):\n    if shape == 'triangle':\n        return 0.5 * base * height\n    elif shape == 'rectangle':\n        return base * height\n    else:\n        raise ValueError(f'Invalid shape: {shape}')",Impact Analysis Selection
+"class EmailSender:\n    def __init__(self, smtp_server, smtp_port, username, password):\n        self.smtp_server = smtp_server\n        self.smtp_port = smtp_port\n        self.username = username\n        self.password = password\n\n    def send_email(self, recipient, subject, message):\n        # Code to send an email\n        pass",Priority Queue Selection
+"numerator = 5\nresult = numerator / 0",Coverage-Driven Selection
+
+
+
+
+
